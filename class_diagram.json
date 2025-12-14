@@ -10,8 +10,8 @@
         "pull",
         "list_models"
       ],
-      "x": 39.0,
-      "y": 111.0
+      "x": 296.0,
+      "y": 378.0
     },
     {
       "id": 1830335509376,
@@ -21,8 +21,8 @@
         "turn_into_logic() : str",
         "# returns the logic prompt"
       ],
-      "x": 38.0,
-      "y": 278.0
+      "x": 42.0,
+      "y": 88.0
     },
     {
       "id": 1830335510144,
@@ -32,8 +32,8 @@
         "# just llm generated uml",
         "builder"
       ],
-      "x": 36.0,
-      "y": 412.0
+      "x": 34.0,
+      "y": 429.0
     },
     {
       "id": 2054259371344,
@@ -47,8 +47,8 @@
         "error(text)",
         "info(text)"
       ],
-      "x": 36.0,
-      "y": 516.0
+      "x": 655.0,
+      "y": 94.0
     },
     {
       "id": 2054259373600,
@@ -59,8 +59,8 @@
         "process_statement(statement :str) :str",
         "# send the thing to the llm."
       ],
-      "x": 365.0,
-      "y": 122.0
+      "x": 342.0,
+      "y": 89.0
     },
     {
       "id": 2444325255552,
@@ -70,8 +70,8 @@
         "@timer decorator",
         "#times the function"
       ],
-      "x": 402.0,
-      "y": 298.0
+      "x": 535.0,
+      "y": 430.0
     }
   ],
   "lines": [
@@ -81,24 +81,92 @@
       "type": "Association"
     },
     {
-      "start": 2054259371344,
+      "start": 2054259373600,
       "end": 2444325255552,
-      "type": "Dependency"
+      "type": "Association"
     },
     {
-      "start": 2444325255552,
-      "end": 2054259373600,
-      "type": "Dependency"
+      "start": 2054259373600,
+      "end": 2054259371344,
+      "type": "Association"
     },
     {
-      "start": 2444325255552,
-      "end": 2054259373600,
-      "type": "Realization"
+      "start": 2054259373600,
+      "end": 1830335509376,
+      "type": "Association"
     },
     {
-      "start": 2444325255552,
+      "start": 1830335507312,
       "end": 2054259373600,
       "type": "Association"
+    },
+    {
+      "start": 1830335507312,
+      "end": 2444325255552,
+      "type": "Association"
+    },
+    {
+      "start": 2054259371344,
+      "end": 2444325255552,
+      "type": "Association"
+    }
+  ],
+  "labels": [
+    {
+      "id": 2300288823616,
+      "type": "label",
+      "text": "download model for ^",
+      "x": 324,
+      "y": 359
+    },
+    {
+      "id": 2300282054192,
+      "type": "label",
+      "text": "times ^",
+      "x": 513,
+      "y": 380
+    },
+    {
+      "id": 2300343570352,
+      "type": "label",
+      "text": "times <",
+      "x": 493,
+      "y": 448
+    },
+    {
+      "id": 2300343579280,
+      "type": "label",
+      "text": "v logs text for",
+      "x": 682,
+      "y": 373
+    },
+    {
+      "id": 2300343580000,
+      "type": "label",
+      "text": "prompt for >",
+      "x": 266,
+      "y": 164
+    },
+    {
+      "id": 2300343580432,
+      "type": "label",
+      "text": "< logs for",
+      "x": 569,
+      "y": 187
+    },
+    {
+      "id": 2300343632288,
+      "type": "label",
+      "text": "separate app",
+      "x": 89,
+      "y": 419
+    },
+    {
+      "id": 2300343581536,
+      "type": "label",
+      "text": "main worker",
+      "x": 393,
+      "y": 76
     }
   ]
 }
