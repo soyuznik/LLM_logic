@@ -1,0 +1,40 @@
+{
+  "boxes": [
+    {
+      "id": 1830335507312,
+      "name": "OllamaManager",
+      "fields": [],
+      "methods": [
+        "__init__(models_dir :str)",
+        "is_ollama_running : bool",
+        "pull",
+        "list_models"
+      ],
+      "x": 39.0,
+      "y": 111.0
+    },
+    {
+      "id": 1830335509376,
+      "name": "app_tools : module",
+      "fields": [],
+      "methods": [
+        "turn_into_logic() : str",
+        "# returns the logic prompt"
+      ],
+      "x": 38.0,
+      "y": 278.0
+    },
+    {
+      "id": 1830335510144,
+      "name": "uml_builder : module",
+      "fields": [],
+      "methods": [
+        "# just llm generated uml",
+        "builder"
+      ],
+      "x": 36.0,
+      "y": 412.0
+    }
+  ],
+  "lines": []
+}
