@@ -1,30 +1,21 @@
 
-from langchain.chat_models import init_chat_model
-from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.output_parsers import StrOutputParser
-from modules.app_tools import turn_into_logic
+from modules.model_interface import ModelInterface
+from modules.logger import Logger
+def main():
+    model_interface = ModelInterface()
 
-llm = init_chat_model(
-    model="qwen2.5:7b", 
-    model_provider="ollama", 
-    temperature=0
-)
+    Logger.log("Enter your statements (type 'exit' to quit):")
+    while True:
+        user_input = """9. Win Through Your Actions, Never Through Argument Any momentary triumph you think gained through argument is really a Pyrrhic victory. The resentment you stir up is stronger and lasts longer than any momentary change of opinion."""
+        
+        
+        
+        #input(">> ")
+        if user_input.lower() == 'exit':
+            break
+        Logger.log("Model Output: ", end="")
+        model_interface.process_statement(user_input)
+        Logger.log()  # for a new line after the output
 
-
-prompt = ChatPromptTemplate.from_messages([
-    ("system", turn_into_logic()),
-    ("user", "{statement}")
-])
-
-
-chain = prompt | llm | StrOutputParser()
-
-
-input_text = "1. Never Outshine the Master Avoid displaying your talents too brightly; it creates insecurity in those above you. Make your masters appear more brilliant than they are."
-
-print("Processing...")
-
-for chunk in chain.stream({"statement": input_text}):
-    print(chunk, end="", flush=True)
-
-print()
+if __name__ == "__main__":
+    main()

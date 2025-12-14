@@ -1,4 +1,20 @@
-venv/*
-.env/
+# --- Python Standard ---
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+# --- Virtual Environments ---
+# Matches the 'venv' folder in your screenshot
+venv/
+env/
+.env
+
+# --- IDEs & Editors ---
+# Matches the 'WebStorm' association seen in your screenshot
+.idea/
+.vscode/
+
+# --- OS Generated Files ---
+.DS_Store
+Thumbs.db

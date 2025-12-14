@@ -4,6 +4,7 @@ import shutil
 import time
 
 class OllamaManager:
+
     def __init__(self, models_dir: str):
         self.models_dir = os.path.abspath(models_dir)
         os.makedirs(self.models_dir, exist_ok=True)

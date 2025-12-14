@@ -34,7 +34,71 @@
       ],
       "x": 36.0,
       "y": 412.0
+    },
+    {
+      "id": 2054259371344,
+      "name": "Logger",
+      "fields": [],
+      "methods": [
+        "setup_file(path) #enable file logging",
+        "private _output(color, args, kwargs)",
+        "log(text)",
+        "warn(text)",
+        "error(text)",
+        "info(text)"
+      ],
+      "x": 36.0,
+      "y": 516.0
+    },
+    {
+      "id": 2054259373600,
+      "name": "ModelInterface",
+      "fields": [],
+      "methods": [
+        "__init__(model_name, model_provider, temperature)# has turn_to_logic hard coded",
+        "process_statement(statement :str) :str",
+        "# send the thing to the llm."
+      ],
+      "x": 365.0,
+      "y": 122.0
+    },
+    {
+      "id": 2444325255552,
+      "name": "time_decorators : module",
+      "fields": [],
+      "methods": [
+        "@timer decorator",
+        "#times the function"
+      ],
+      "x": 402.0,
+      "y": 298.0
     }
   ],
-  "lines": []
+  "lines": [
+    {
+      "start": 1830335507312,
+      "end": 2054259373600,
+      "type": "Association"
+    },
+    {
+      "start": 2054259371344,
+      "end": 2444325255552,
+      "type": "Dependency"
+    },
+    {
+      "start": 2444325255552,
+      "end": 2054259373600,
+      "type": "Dependency"
+    },
+    {
+      "start": 2444325255552,
+      "end": 2054259373600,
+      "type": "Realization"
+    },
+    {
+      "start": 2444325255552,
+      "end": 2054259373600,
+      "type": "Association"
+    }
+  ]
 }
