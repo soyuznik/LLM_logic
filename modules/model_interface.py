@@ -5,6 +5,7 @@ from modules.app_tools import turn_into_logic
 from modules.logger import Logger
 from modules.time_decorators import timer
 class ModelInterface:
+    outputs = {}
     # initializes the model interface with the specified model and prompt
     # defaults to qwen2.5:7b from ollama with temperature 0
     @timer
@@ -31,3 +32,18 @@ class ModelInterface:
             Logger.log(chunk, end="");   
             result += chunk
         return result
+    # extracts and returns only the logic form expression from the llm output
+    def get_expression(self, statement: str) -> str:
+        if(statement in self.outputs):
+            return self.outputs[statement].split("Logic Form Expression:", 1)[1].strip()
+        else:
+            self.outputs[statement] = self.process_statement(statement)
+        return self.outputs[statement].split("Logic Form Expression:", 1)[1].strip()
+    # extracts and returns only the definitions
+    # if it is already in database, it will return the existing definitions
+    def get_definitions(self, statement: str) -> str:
+        if(statement in self.outputs):
+            return self.outputs[statement].split("Logic Form Expression:", 1)[0].strip()
+        else:
+            self.outputs[statement] = self.process_statement(statement)
+        return self.outputs[statement].split("Logic Form Expression:", 1)[0].strip()

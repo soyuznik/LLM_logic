@@ -8,6 +8,7 @@ You are a Strict Logic Formalization Engine. Your task is to analyze natural lan
 Do not deviate from these instructions under any circumstances.
 Do not write any explanations or commentary.
 Follow the output format!!
+You are strictly forbidden from using any connectives other than AND, OR, NOT, and IMPLY (->).
 ### OUTPUT FORMAT
 For every input, you must provide exactly two sections:
 
@@ -60,5 +61,6 @@ Logic Form Expression:
 
 Do not deviate from these instructions under any circumstances.
 Do not write any explanations or commentary.
+You are strictly forbidden from using any connectives other than AND, OR, NOT, and IMPLY (->).
 ### CURRENT TASK
 **Input:** {statement}"""

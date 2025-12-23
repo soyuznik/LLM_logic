@@ -1,10 +1,8 @@
 import os
 import subprocess
-import shutil
-import time
-
+from modules.time_decorators import timer
 class OllamaManager:
-
+    @timer
     def __init__(self, models_dir: str):
         self.models_dir = os.path.abspath(models_dir)
         os.makedirs(self.models_dir, exist_ok=True)
@@ -25,7 +23,7 @@ class OllamaManager:
             return False
         except FileNotFoundError:
             raise RuntimeError("Ollama not installed or not in PATH")
-
+    @timer
     def pull(self, model: str):
         print(f"Pulling {model} into {self.models_dir}")
         subprocess.run(

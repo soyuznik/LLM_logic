@@ -4,7 +4,6 @@ import tkinter as tk
 from tkinter import messagebox, filedialog, ttk
 import json
 import math
-import copy
 
 # --- Geometry Helper for Custom Arrowheads ---
 def rotate_point(x, y, cx, cy, angle_rad):
